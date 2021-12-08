@@ -84,12 +84,19 @@ include("checkiflogin.php");
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/notifications.php">
+          <a class="nav-link text-white " href="../pages/playerinventoriesDashboard.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">drive_eta</i>
-
+            <i class="material-icons opacity-10">inventory_2</i>
             </div>
-            <span class="nav-link-text ms-1">Banned Players</span>
+            <span class="nav-link-text ms-1">Search Player Inventory</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="../pages/inventoriesDashboard.php">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10">local_shipping</i>
+            </div>
+            <span class="nav-link-text ms-1">Search Veh Inventories</span>
           </a>
         </li>
         <li class="nav-item">
@@ -692,18 +699,6 @@ function searchname(){ //Agrega inputs segun cantidad de ocupantes totales
   document.getElementById("inputProp").focus();
 }
 
-function showResultsNAME(str) {
-
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("results").innerHTML = this.responseText;
-      }
-    };
-    xmlhttp.open("GET", "searchDataInventarioConsumo.inc.php?fr=name&q=" + str, true);
-    xmlhttp.send();
-  
-}
 
 function showResultsNAME(str) {
 
@@ -713,7 +708,7 @@ xmlhttp.onreadystatechange = function() {
   document.getElementById("results").innerHTML = this.responseText;
   }
 };
-xmlhttp.open("GET", "searchvehicleResulte.inc.php?fr=name&q=" + str, true);
+xmlhttp.open("GET", "search/searchvehicleResulte.inc.php?fr=name&q=" + str, true);
 xmlhttp.send();
 
 }

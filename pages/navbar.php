@@ -34,12 +34,12 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/notifications.php">
+          <a class="nav-link text-white " href="../pages/inventoriesDashboard.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">drive_eta</i>
 
             </div>
-            <span class="nav-link-text ms-1">Banned Players</span>
+            <span class="nav-link-text ms-1">Search Inventories</span>
           </a>
         </li>
         <li class="nav-item">

@@ -22,7 +22,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Material Dashboard 2 by Creative Tim
+    Berserker Dashboard
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -74,12 +74,19 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/notifications.php">
+          <a class="nav-link text-white " href="../pages/playerinventoriesDashboard.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">drive_eta</i>
-
+            <i class="material-icons opacity-10">inventory_2</i>
             </div>
-            <span class="nav-link-text ms-1">Banned Players</span>
+            <span class="nav-link-text ms-1">Search Player Inventory</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="../pages/inventoriesDashboard.php">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10">local_shipping</i>
+            </div>
+            <span class="nav-link-text ms-1">Search Veh Inventories</span>
           </a>
         </li>
         <li class="nav-item">
@@ -107,7 +114,7 @@
       </div>
     </div>
   </aside>
-  <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
+    <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
     <div class="container-fluid px-2 px-md-4">
       <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
         <span class="mask  bg-gradient-primary  opacity-6"></span>

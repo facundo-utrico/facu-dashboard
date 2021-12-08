@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Material Dashboard 2 by Creative Tim
+    Berserker Dashboard
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -73,12 +73,19 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/notifications.php">
+          <a class="nav-link text-white " href="../pages/playerinventoriesDashboard.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="material-icons opacity-10">drive_eta</i>
-
+            <i class="material-icons opacity-10">inventory_2</i>
             </div>
-            <span class="nav-link-text ms-1">Banned Players</span>
+            <span class="nav-link-text ms-1">Search Player Inventory</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="../pages/inventoriesDashboard.php">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10">local_shipping</i>
+            </div>
+            <span class="nav-link-text ms-1">Search Veh Inventories</span>
           </a>
         </li>
         <li class="nav-item">
@@ -112,7 +119,7 @@
     <div class="col-md-6 col-lg-3 col-sm-12">
                   <div class="card grow">
                     <div class="card-header mx-4 p-3 text-center">
-                      <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                      <div class="icon icon-shape icon-lg bg-gradient-primary2 shadow text-center border-radius-lg">
                         <i class="material-icons opacity-10">account_balance</i>
                       </div>
                     </div>
@@ -127,7 +134,7 @@
                 <div class="col-md-6 col-lg-3 col-sm-12">
                   <div class="card grow">
                     <div class="card-header mx-4 p-3 text-center">
-                      <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                      <div class="icon icon-shape icon-lg bg-gradient-primary2 shadow text-center border-radius-lg">
                         <i class="material-icons opacity-10">account_balance</i>
                       </div>
                     </div>
@@ -142,7 +149,7 @@
                 <div class="col-md-6 col-lg-3 col-sm-12">
                   <div class="card grow">
                     <div class="card-header mx-4 p-3 text-center">
-                      <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                      <div class="icon icon-shape icon-lg bg-gradient-primary2 shadow text-center border-radius-lg">
                         <i class="material-icons opacity-10">account_balance</i>
                       </div>
                     </div>
@@ -157,7 +164,7 @@
                 <div class="col-md-6 col-lg-3 col-sm-12">
                   <div class="card grow">
                     <div class="card-header mx-4 p-3 text-center">
-                      <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                      <div class="icon icon-shape icon-lg bg-gradient-primary2 shadow text-center border-radius-lg">
                         <i class="material-icons opacity-10">account_balance_wallet</i>
                       </div>
                     </div>
@@ -199,7 +206,7 @@
         </div>
         <a href="javascript:void(0)" class="switch-trigger background-color">
           <div class="badge-colors my-2 text-start">
-            <span class="badge filter bg-gradient-primary active" data-color="primary" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-primary2 active" data-color="primary" onclick="sidebarColor(this)"></span>
             <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
             <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
             <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>

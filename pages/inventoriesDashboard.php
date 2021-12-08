@@ -124,7 +124,7 @@ include("checkiflogin.php");
       </div>
     </div>
   </aside>
-  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
       <div class="container-fluid py-1 px-3">
@@ -165,15 +165,16 @@ include("checkiflogin.php");
             <div class="col-md-12">
              				 
 					<div class="card">
+            <h1>Search Vehicle Inventory</h1>
 					  <div class="card-header card-header-primary">
-						<h1 class="card-title">Search for Players.</h1>
+						<h4 class="card-title">Use the search bar to search for vehicles inventories.</h4>
 						<p class="card-category">Search by: <br>
 							<form action="" name="search">
 								<!--<label style="color: #fafafa; font-size: 15px;"><input type="radio" name="filter" onclick="searchnie()" value="1"> Numero de identificación</label><br>-->
 
 								<!--<label style="color: #fafafa; font-size: 15px;"><input type="radio" name="filter" onclick="Inquilino()" value="2"> Inquilino</label><br>-->
 								
-								<label style="color: #000; font-size: 15px;"><input type="radio" name="filter" onclick="searchname()" value="3"> Steam Name</label><br>
+								<label style="color: #000; font-size: 15px;"><input type="radio" name="filter" onclick="searchname()" value="3"> Plate</label><br>
 								<!-- <input style="color: #000;" onkeyup="showResultsNAME(this.value)" type="text" name="nameProp" class="form-control" required="" id="inputProp"> -->
 								<div id="inputSearch">
 								</div>
@@ -185,53 +186,28 @@ include("checkiflogin.php");
 							<table class="table">
 							  <thead class=" text-primary">
 								<th>
-								  Name
+								  Identifier (Plate)
 								</th>
 								<th>
-								  Identifier
+								  Type
 								</th>
 								<th>
-								  Bank Account
-								</th>
-								<th>
-								  Money
-								</th>
-                <th>
-								  Level
-								</th>
-                <th>
-								  Group
-								</th>
-                <th>
-								  Boost Time
-								</th>
-                <th>
-								  Is dead
+								  Data
 								</th>
 							  </thead>
 							  <tbody id="results">
 							  <?php
 								$contadorElementos=0;
 							
-								$sql="SELECT * FROM users"; 
+								$sql="SELECT * FROM inventories"; 
 								if ($result=mysqli_query($con,$sql))
 								{
 									while ($row=mysqli_fetch_row($result))
 									{
-										$identifier = $row[0];
-										$money = $row[1];
-										$name = $row[3];
-										$bank = $row[9];
-										$group = $row[11];
-										$level = $row[28];
-                    $boostime = $row[34];
-                    $isDead = $row[17]; 
+										$identifierInv = $row[1];
+                    $typeInv = $row[2];
+                    $dataInv = $row[3];
 
-                    if ($isDead == 1) {
-                      $textIsDead = 'Yes';          
-                    } else {
-                      $textIsDead = 'No';
-                    }
 
 
 										$contadorElementos++;
@@ -239,28 +215,13 @@ include("checkiflogin.php");
                   
 								<tr>
 								  <td>
-									<a href="ElementoInventarioConsumo?"><?=$name?></a>
-								  </td>
-								  <td>
-									<?=$identifier?>
+									<?=$identifierInv?>
 								  </td>
                   <td>
-									<?=$bank?>  
+									<?=$typeInv?>  
 								  </td>
                   <td>
-									<?=$money?>
-								  </td>
-                  <td>
-									<?=$level?>
-								  </td>
-                  <td>
-									<?=$group?>
-								  </td>
-                  <td>
-									<?=$boostime?>
-								  </td>
-                  <td>
-									<?=$textIsDead?>
+									<?=$dataInv?>
 								  </td>
 								</tr>
 								<?php
@@ -273,8 +234,6 @@ include("checkiflogin.php");
 						  </div>
 						</div>
 					</div>
-				  
-				
             </div>
           </div>
         </div>
@@ -729,7 +688,7 @@ function searchnie(){ //Agrega inputs segun cantidad de ocupantes totales
   document.getElementById("inputProp").value = 'EC-';
 }
 function searchname(){ //Agrega inputs segun cantidad de ocupantes totales
-  document.getElementById('inputSearch').innerHTML = "<div class='form-group bmd-form-group'><input placeholder='Steam Name' style='color: #000;' onkeyup='showResultsNAME(this.value)' type='text' name='nameProp' class='form-control' required='' id='inputProp'></div>";
+  document.getElementById('inputSearch').innerHTML = "<div class='form-group bmd-form-group'><input placeholder='Vehicle Plate' style='color: #000;' onkeyup='showResultsNAME(this.value)' type='text' name='nameProp' class='form-control' required='' id='inputProp'></div>";
   document.getElementById("inputProp").focus();
 }
 
@@ -741,11 +700,10 @@ function showResultsNAME(str) {
       document.getElementById("results").innerHTML = this.responseText;
       }
     };
-    xmlhttp.open("GET", "search/searchPlayers.inc.php?fr=name&q=" + str, true);
+    xmlhttp.open("GET", "search/searchPlateResulte.inc.php?fr=name&q=" + str, true);
     xmlhttp.send();
   
 }
-
 
 </script>
 </body>
