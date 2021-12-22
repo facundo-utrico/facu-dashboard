@@ -32,7 +32,7 @@ include("checkiflogin.php");
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Material Dashboard 2 by Creative Tim
+    Facu Dashboard
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -132,7 +132,7 @@ include("checkiflogin.php");
       </div>
     </div>
   </aside>
-  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
       <div class="container-fluid py-1 px-3">
@@ -173,16 +173,16 @@ include("checkiflogin.php");
             <div class="col-md-12">
              				 
 					<div class="card">
-            <h1>Search Vehicle Plate (Owned Vehicles)</h1>
+            <h1>Search Vehicle Inventory</h1>
 					  <div class="card-header card-header-primary">
-						<h4 class="card-title">Use the search bar to search for vehicles.</h4>
-						<p class="card-category">Search for: <br>
+						<h4 class="card-title">Use the search bar to search for vehicles inventories.</h4>
+						<p class="card-category">Search by: <br>
 							<form action="" name="search">
 								<!--<label style="color: #fafafa; font-size: 15px;"><input type="radio" name="filter" onclick="searchnie()" value="1"> Numero de identificación</label><br>-->
 
 								<!--<label style="color: #fafafa; font-size: 15px;"><input type="radio" name="filter" onclick="Inquilino()" value="2"> Inquilino</label><br>-->
 								
-								<label style="color: #000; font-size: 15px;"><input type="radio" name="filter" onclick="searchname()" value="3"> Steam Identifier</label><br>
+								<label style="color: #000; font-size: 15px;"><input type="radio" name="filter" onclick="searchname()" value="3"> Plate</label><br>
 								<!-- <input style="color: #000;" onkeyup="showResultsNAME(this.value)" type="text" name="nameProp" class="form-control" required="" id="inputProp"> -->
 								<div id="inputSearch">
 								</div>
@@ -194,31 +194,27 @@ include("checkiflogin.php");
 							<table class="table">
 							  <thead class=" text-primary">
 								<th>
-								  Owner (Identifier)
-								</th>
-								<th>
-								  Plate
+								  Identifier (Plate)
 								</th>
 								<th>
 								  Type
 								</th>
-                <th>
-								  Garage ID
+								<th>
+								  Data
 								</th>
 							  </thead>
 							  <tbody id="results">
 							  <?php
 								$contadorElementos=0;
 							
-								$sql="SELECT * FROM owned_vehicles"; 
+								$sql="SELECT * FROM inventories"; 
 								if ($result=mysqli_query($con,$sql))
 								{
 									while ($row=mysqli_fetch_row($result))
 									{
-										$identifier = $row[1];
-                    $plate = $row[7];
-                    $type = $row[8];
-                    $garageID = $row[10];
+										$identifierInv = $row[1];
+                    $typeInv = $row[2];
+                    $dataInv = $row[3];
 
 
 
@@ -227,16 +223,13 @@ include("checkiflogin.php");
                   
 								<tr>
 								  <td>
-									<?=$identifier?>
+									<?=$identifierInv?>
 								  </td>
                   <td>
-									<?=$plate?>  
+									<?=$typeInv?>  
 								  </td>
                   <td>
-									<?=$type?>
-								  </td>
-                  <td>
-									<?=$garageID?>
+									<?=$dataInv?>
 								  </td>
 								</tr>
 								<?php
@@ -703,24 +696,22 @@ function searchnie(){ //Agrega inputs segun cantidad de ocupantes totales
   document.getElementById("inputProp").value = 'EC-';
 }
 function searchname(){ //Agrega inputs segun cantidad de ocupantes totales
-  document.getElementById('inputSearch').innerHTML = "<div class='form-group bmd-form-group'><input placeholder='Steam Identifier' style='color: #000;' onkeyup='showResultsNAME(this.value)' type='text' name='nameProp' class='form-control' required='' id='inputProp'></div>";
+  document.getElementById('inputSearch').innerHTML = "<div class='form-group bmd-form-group'><input placeholder='Vehicle Plate' style='color: #000;' onkeyup='showResultsNAME(this.value)' type='text' name='nameProp' class='form-control' required='' id='inputProp'></div>";
   document.getElementById("inputProp").focus();
 }
 
-
 function showResultsNAME(str) {
 
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-  document.getElementById("results").innerHTML = this.responseText;
-  }
-};
-xmlhttp.open("GET", "search/searchvehicleResulte.inc.php?fr=name&q=" + str, true);
-xmlhttp.send();
-
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("results").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "search/searchPlateResulte.inc.php?fr=name&q=" + str, true);
+    xmlhttp.send();
+  
 }
-
 
 </script>
 </body>

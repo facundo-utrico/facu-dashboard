@@ -14,15 +14,15 @@
       var ps1 = new PerfectScrollbar(sidebar);
     };
 
-    if (document.getElementsByClassName('navbar-collapse')[0]) {
-      var fixedplugin = document.querySelector('.navbar-collapse');
-      var ps2 = new PerfectScrollbar(fixedplugin);
-    };
+    // if (document.getElementsByClassName('navbar-collapse')[0]) {
+    //   var fixedplugin = document.querySelector('.navbar-collapse');
+    //   var ps2 = new PerfectScrollbar(fixedplugin);
+    // };
 
-    if (document.getElementsByClassName('fixed-plugin')[0]) {
-      var fixedplugin = document.querySelector('.fixed-plugin');
-      var ps3 = new PerfectScrollbar(fixedplugin);
-    };
+    // if (document.getElementsByClassName('fixed-plugin')[0]) {
+    //   var fixedplugin = document.querySelector('.fixed-plugin');
+    //   var ps3 = new PerfectScrollbar(fixedplugin);
+    // };
   };
 })();
 

@@ -64,10 +64,11 @@ include("checkiflogin.php");
                 $vehiclesCount = mysqli_num_rows( $result );
               }
 
+
   ?>
 
 <body class="g-sidenav-show  bg-gray-200">
-<aside onLoad="searchname();" class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark" id="sidenav-main">
+<aside onLoad="searchname();" class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
@@ -151,75 +152,30 @@ include("checkiflogin.php");
       </div>
     </div>
   </aside>
-    <main class="dashboard-cards main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-      <div class="container-fluid py-4">
-      <div class="row">
-        <h1>Server Resume</h1>
-      <div class="col-md-6 col-lg-3 col-sm-12">
-                    <div class="card grow">
-                      <div class="card-header mx-4 p-3 text-center">
-                        <div class="icon icon-shape icon-lg bg-gradient-primary2 shadow text-center border-radius-lg">
-                          <i class="material-icons opacity-10">account_balance</i>
-                        </div>
-                      </div>
-                      <div class="card-body pt-0 p-3 text-center">
-                        <h6 class="text-center mb-0">Registered Players</h6>
-                        <span class="text-xs">Total count</span>
-                        <hr class="horizontal dark my-3">
-                        <h5 class="mb-0"><?=$usersCount?></h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-3 col-sm-12">
-                    <div class="card grow">
-                      <div class="card-header mx-4 p-3 text-center">
-                        <div class="icon icon-shape icon-lg bg-gradient-primary2 shadow text-center border-radius-lg">
-                          <i class="material-icons opacity-10">account_balance</i>
-                        </div>
-                      </div>
-                      <div class="card-body pt-0 p-3 text-center">
-                        <h6 class="text-center mb-0">Vehicles</h6>
-                        <span class="text-xs">All owned vehicles</span>
-                        <hr class="horizontal dark my-3">
-                        <h5 class="mb-0"><?=$vehiclesCount?></h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-3 col-sm-12">
-                    <div class="card grow">
-                      <div class="card-header mx-4 p-3 text-center">
-                        <div class="icon icon-shape icon-lg bg-gradient-primary2 shadow text-center border-radius-lg">
-                          <i class="material-icons opacity-10">account_balance</i>
-                        </div>
-                      </div>
-                      <div class="card-body pt-0 p-3 text-center">
-                        <h6 class="text-center mb-0">Zombies Annihilated </h6>
-                        <span class="text-xs">Total count</span>
-                        <hr class="horizontal dark my-3">
-                        <h5 class="mb-0">2500</h5>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-lg-3 col-sm-12">
-                    <div class="card grow">
-                      <div class="card-header mx-4 p-3 text-center">
-                        <div class="icon icon-shape icon-lg bg-gradient-primary2 shadow text-center border-radius-lg">
-                          <i class="material-icons opacity-10">account_balance_wallet</i>
-                        </div>
-                      </div>
-                      <div class="card-body pt-0 p-3 text-center">
-                        <h6 class="text-center mb-0">VIP USERS</h6>
-                        <span class="text-xs">Total count</span>
-                        <hr class="horizontal dark my-3">
-                        <h5 class="mb-0">2</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-        </div>
-        </div>
-      </div>
-    </main>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+  <form name="miFormulario1" class="form-horizontal">
+  <h1>Insert Item Into DB</h1>
+  <div class="form-group col-lg-12 d-flex align-items-center justify-content-center">
+    <!-- <label class="col-xs-2 control-label">Name:</label> -->
+    <div class="col-xs-10">
+      <input placeholder="Name" type="text" id="idDescripcionT" name="txt_Descripcion" class="form-control input-sm">
+    </div>
+  </div>
+  <div class="form-group d-flex align-items-center justify-content-center">
+    <!-- <label class="col-xs-2 control-label">Label:</label> -->
+    <div class="col-xs-10">
+    <input placeholder="Label" type="text" id="idDescripcionT" name="txt_Descripcion" class="form-control input-sm col-lg-12 d-flex align-items-center justify-content-center">
+    </div>
+  </div>
+  <div class="form-group d-flex align-items-center justify-content-center">
+    <!-- <label class="col-xs-2 control-label">Limit: </label><br> -->
+    <div class="col-xs-10">
+    <input  placeholder="Limit" class="form-control col-md-12 col-sm-12 input-sm d-flex" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+    </div>
+  </div>
+  <button type="button" class="col-lg-2 align-items-center justify-content-center btn btn-dark">Insert item</button>
+</form>
+  </main>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>

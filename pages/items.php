@@ -32,7 +32,7 @@ include("checkiflogin.php");
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Berserker Dashboard
+    Facu Dashboard
   </title>
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -53,14 +53,14 @@ include("checkiflogin.php");
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
         <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold text-white">Berserker Dashboard</span>
+        <span class="ms-1 font-weight-bold text-white">Facu Dashboard</span>
       </a>
     </div>
     <hr class="horizontal light mt-0 mb-2">
     <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
       <ul class="navbar-nav">
       <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/tables.php">
+          <a class="nav-link text-white " href="../pages/dashboard.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">home</i>
             </div>
@@ -68,7 +68,7 @@ include("checkiflogin.php");
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white active bg-gradient-primary" href="../pages/dashboard.php">
+          <a class="nav-link text-white active bg-gradient-primary" href="../pages/players.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">supervised_user_circle</i>
             </div>
@@ -76,7 +76,7 @@ include("checkiflogin.php");
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/billing.php">
+          <a class="nav-link text-white " href="../pages/store.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">store</i>
             </div>
@@ -84,7 +84,15 @@ include("checkiflogin.php");
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/playerinventoriesDashboard.php">
+          <a class="nav-link text-white " href="../pages/items.php">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">assignment_turned_in</i>
+            </div>
+            <span class="nav-link-text ms-1">Search Items</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="../pages/playerinventories.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="material-icons opacity-10">inventory_2</i>
             </div>
@@ -92,7 +100,7 @@ include("checkiflogin.php");
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/inventoriesDashboard.php">
+          <a class="nav-link text-white " href="../pages/vehicleinventory.php">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="material-icons opacity-10">local_shipping</i>
             </div>
@@ -124,7 +132,7 @@ include("checkiflogin.php");
       </div>
     </div>
   </aside>
-    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
       <div class="container-fluid py-1 px-3">
@@ -143,11 +151,7 @@ include("checkiflogin.php");
     <!-- start search -->
     <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="">
-      <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
+                  
       <div class="sidebar-wrapper">
         <?php
 		$activePage="ListaInventarioConsumo"; //Seteo para marcar active en menú ?> 
@@ -165,16 +169,16 @@ include("checkiflogin.php");
             <div class="col-md-12">
              				 
 					<div class="card">
-            <h1>Search Vehicle Inventory</h1>
 					  <div class="card-header card-header-primary">
-						<h4 class="card-title">Use the search bar to search for vehicles inventories.</h4>
+						<h1 class="card-title">Search Or Modify Items.</h1>
+            <button type="button" class="btn btn-light" href='formADD.php'><a href="formADD.php">Create New Item</a></button>
 						<p class="card-category">Search by: <br>
 							<form action="" name="search">
 								<!--<label style="color: #fafafa; font-size: 15px;"><input type="radio" name="filter" onclick="searchnie()" value="1"> Numero de identificación</label><br>-->
 
 								<!--<label style="color: #fafafa; font-size: 15px;"><input type="radio" name="filter" onclick="Inquilino()" value="2"> Inquilino</label><br>-->
 								
-								<label style="color: #000; font-size: 15px;"><input type="radio" name="filter" onclick="searchname()" value="3"> Plate</label><br>
+								<label style="color: #000; font-size: 15px;"><input type="radio" name="filter" onclick="searchname()" value="3">Code</label><br>
 								<!-- <input style="color: #000;" onkeyup="showResultsNAME(this.value)" type="text" name="nameProp" class="form-control" required="" id="inputProp"> -->
 								<div id="inputSearch">
 								</div>
@@ -186,27 +190,49 @@ include("checkiflogin.php");
 							<table class="table">
 							  <thead class=" text-primary">
 								<th>
-								  Identifier (Plate)
+								  Name (Code)
 								</th>
 								<th>
-								  Type
+								  Label
 								</th>
 								<th>
-								  Data
+								  Limit
+								</th>
+								<th>
+								  Rare
+								</th>
+                <th>
+								  Can Remove
 								</th>
 							  </thead>
 							  <tbody id="results">
 							  <?php
 								$contadorElementos=0;
 							
-								$sql="SELECT * FROM inventories"; 
+								$sql="SELECT * FROM items"; 
 								if ($result=mysqli_query($con,$sql))
 								{
 									while ($row=mysqli_fetch_row($result))
 									{
-										$identifierInv = $row[1];
-                    $typeInv = $row[2];
-                    $dataInv = $row[3];
+										$itemName = $row[0];
+										$itemLabel = $row[1];
+										$itemLimit = $row[2];
+										$itemRare = $row[3];
+                    $can_remove = $row[4];
+                    
+
+                    if ($itemRare == 1) {
+                      $textRare = 'Yes';          
+                    } else {
+                      $textRare = 'No';
+                    }
+
+                    
+                    if ($can_remove == 1) {
+                      $textRemove = 'Yes';          
+                    } else {
+                      $textRemove = 'No';
+                    }
 
 
 
@@ -215,13 +241,19 @@ include("checkiflogin.php");
                   
 								<tr>
 								  <td>
-									<?=$identifierInv?>
+									<?=$itemName?>
 								  </td>
                   <td>
-									<?=$typeInv?>  
+									<?=$itemLabel?>  
 								  </td>
                   <td>
-									<?=$dataInv?>
+									<?=$itemLimit?>
+								  </td>
+                  <td>
+									<?=$textRare?>
+								  </td>
+                  <td>
+									<?=$textRemove?>
 								  </td>
 								</tr>
 								<?php
@@ -234,6 +266,8 @@ include("checkiflogin.php");
 						  </div>
 						</div>
 					</div>
+				  
+				
             </div>
           </div>
         </div>
@@ -524,44 +558,44 @@ include("checkiflogin.php");
 
         fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').php();
 
-        if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
-          if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
-            $('.fixed-plugin .dropdown').addClass('open');
-          }
+        // if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+        //   if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+        //     $('.fixed-plugin .dropdown').addClass('open');
+        //   }
 
-        }
+        // }
 
-        $('.fixed-plugin a').click(function(event) {
-          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
-          if ($(this).hasClass('switch-trigger')) {
-            if (event.stopPropagation) {
-              event.stopPropagation();
-            } else if (window.event) {
-              window.event.cancelBubble = true;
-            }
-          }
-        });
+        // $('.fixed-plugin a').click(function(event) {
+        //   // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+        //   if ($(this).hasClass('switch-trigger')) {
+        //     if (event.stopPropagation) {
+        //       event.stopPropagation();
+        //     } else if (window.event) {
+        //       window.event.cancelBubble = true;
+        //     }
+        //   }
+        // });
 
-        $('.fixed-plugin .active-color span').click(function() {
-          $full_page_background = $('.full-page-background');
+        // $('.fixed-plugin .active-color span').click(function() {
+        //   $full_page_background = $('.full-page-background');
 
-          $(this).siblings().removeClass('active');
-          $(this).addClass('active');
+        //   $(this).siblings().removeClass('active');
+        //   $(this).addClass('active');
 
-          var new_color = $(this).data('color');
+        //   var new_color = $(this).data('color');
 
-          if ($sidebar.length != 0) {
-            $sidebar.attr('data-color', new_color);
-          }
+        //   if ($sidebar.length != 0) {
+        //     $sidebar.attr('data-color', new_color);
+        //   }
 
-          if ($full_page.length != 0) {
-            $full_page.attr('filter-color', new_color);
-          }
+        //   if ($full_page.length != 0) {
+        //     $full_page.attr('filter-color', new_color);
+        //   }
 
-          if ($sidebar_responsive.length != 0) {
-            $sidebar_responsive.attr('data-color', new_color);
-          }
-        });
+        //   if ($sidebar_responsive.length != 0) {
+        //     $sidebar_responsive.attr('data-color', new_color);
+        //   }
+        // });
 
         $('.fixed-plugin .background-color .badge').click(function() {
           $(this).siblings().removeClass('active');
@@ -688,7 +722,7 @@ function searchnie(){ //Agrega inputs segun cantidad de ocupantes totales
   document.getElementById("inputProp").value = 'EC-';
 }
 function searchname(){ //Agrega inputs segun cantidad de ocupantes totales
-  document.getElementById('inputSearch').innerHTML = "<div class='form-group bmd-form-group'><input placeholder='Vehicle Plate' style='color: #000;' onkeyup='showResultsNAME(this.value)' type='text' name='nameProp' class='form-control' required='' id='inputProp'></div>";
+  document.getElementById('inputSearch').innerHTML = "<div class='form-group bmd-form-group'><input placeholder='Item Code' style='color: #000;' onkeyup='showResultsNAME(this.value)' type='text' name='nameProp' class='form-control' required='' id='inputProp'></div>";
   document.getElementById("inputProp").focus();
 }
 
@@ -700,10 +734,11 @@ function showResultsNAME(str) {
       document.getElementById("results").innerHTML = this.responseText;
       }
     };
-    xmlhttp.open("GET", "search/searchPlateResulte.inc.php?fr=name&q=" + str, true);
+    xmlhttp.open("GET", "search/searchItems.inc.php?fr=name&q=" + str, true);
     xmlhttp.send();
   
 }
+
 
 </script>
 </body>

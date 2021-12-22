@@ -13586,6 +13586,7 @@ body.dark-version {
     transform: translateX(-50%) translateY(-50%); }
 
 .fixed-plugin .fixed-plugin-button {
+  display: none;
   background: #fff;
   border-radius: 50%;
   bottom: 30px;
@@ -17565,4 +17566,36 @@ th {
 	.grow:hover { 
 	transform: scale(1.04); 
   cursor: pointer;
+}
+
+
+.input-sm {
+  border: 1px solid grey;
+  color: black;
+  padding: 5px;
+}
+
+.form-group {
+  padding: 10px;
+  color: black;
+}
+
+.form-horizontal {
+ margin-top: 10%;
+ background-color: #00C1;
+ border-bottom: 5px black;
+ text-align: center;
+ padding: 40px;
+ margin-left: 20%;
+ margin-right: 20%;
+ border: 2px solid black;
+ border-radius: 5px;
+}
+
+.control-label {
+  padding: 5px;
+}
+
+.dashboard-cards  {
+  margin-top: 10%;
 }
