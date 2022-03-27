@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(img/background.jpg);
+
+}
+
+#login {
+    /* position: absolute; */
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+#formulario {
+    position: fixed;
+    padding: 50px 60px 0px 60px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    height: 100%;
+    background: white;
+    text-align: center;
+
+}
+
+.btn-outline-dark {
+    margin-top: 8%;
+    width: 200px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+
+}
+
+.login-form {
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+#login-foto {
+    width: 150px;
+    /* margin-top: 50px; */
+    height: 150px;
+    border: none;
+    background: none;
+}
+
+.div-foto {
+    /* border: 1px solid blue; */
+    padding: 20px;
+}
+
+.monserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.login-form {
+    border: solid 10px red;
+}
+
+.love {
+    position: fixed; 
+    bottom: 0px; 
+    width: 20%;
+    background-color: white;
+
+
+    padding-bottom: 10px;
+}
+
+#amor { 
+    margin: 0 auto; 
+    width: 300px;
+}
+
+.card {
+    padding-left: 50px;
+}
