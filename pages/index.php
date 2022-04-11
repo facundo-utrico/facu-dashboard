@@ -23,7 +23,7 @@
     <div class="d-flex justify-content-center div-foto"><img id="login-foto" src="img/logo.png" alt="Logo de Facundo" class="img-thumbnail"></div>
     <div class="form-group">
         <label for="exampleInputEmail1" class="monserrat">User</label>
-        <input type="email" class="form-control login-form" id="exampleInputEmail1" name="username" aria-describedby="emailHelp" placeholder="User" required>
+        <input type="text" class="form-control login-form" id="exampleInputEmail1" name="username" aria-describedby="emailHelp" placeholder="User" required>
         <small id="emailHelp" class="form-text text-muted">Dont share this info.</small>
     </div>
     <div class="form-group">
