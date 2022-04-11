@@ -2,7 +2,7 @@
 
 Web Administration Dashboard for FiveM Servers | **Work In Progress**
 
-**Tech: **
+**Tech:**
 - PHP
 - MYSQL
 - Bootstrap 
@@ -12,7 +12,7 @@ Web Administration Dashboard for FiveM Servers | **Work In Progress**
 - Server Overview Page ✅
 - Edit/Delete Characters. ✅
 
-**Working on: **
+**Working on:**
 - Create/Edit/Delete Items ☐
 - Inventories Page (Player, Trunk, Glovebox) ☐
 - Bans Page ☐
