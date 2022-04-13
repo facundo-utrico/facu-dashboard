@@ -11,16 +11,16 @@
 <title>facu Admin Panel</title>
 </head>
 <?php
-include("settings.php");
+include("../config/settings.php");
 
 session_start();
 if(!isset($_SESSION["login"])){
-header("Location:index.php");
+header("Location:/index.php");
 }else{
 ?>
 <body>
-    <?php include("facu-nav.php"); ?>
-    <?php include("connect.php"); ?>
+    <?php include("../nav/facu-nav.php"); ?>
+    <?php include("../config/connect.php"); ?>
     <h1 style="margin-top: 50px; text-align: center; width: 100%; color: #fff; font-size: 20px;">Facu admin - Jugadores</h1>
 
 <div class="input-group">

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Style link -->
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="assets/login.css">
     <!-- Bootstrap Link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Bootrstrap JS -->
@@ -18,9 +18,9 @@
 <body>
 
 <!--  -->
-<form id="formulario" class="col-lg-3 col-md-2 col-sm-12" action="islogged.php" method="POST">
+<form id="formulario" class="col-lg-3 col-md-2 col-sm-12" action="config/islogged.php" method="POST">
     <div class="d-flex justify-content-center"><h1>LOGIN</h1></div>
-    <div class="d-flex justify-content-center div-foto"><img id="login-foto" src="img/logo.png" alt="Logo de Facundo" class="img-thumbnail"></div>
+    <div class="d-flex justify-content-center div-foto"><img id="login-foto" src="assets/img/logo.png" alt="Logo de Facundo" class="img-thumbnail"></div>
     <div class="form-group">
         <label for="exampleInputEmail1" class="monserrat">User</label>
         <input type="text" class="form-control login-form" id="exampleInputEmail1" name="username" aria-describedby="emailHelp" placeholder="User" required>

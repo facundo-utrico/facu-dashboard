@@ -8,9 +8,9 @@
 	
 			$query = mysqli_real_escape_string($connection, $_GET["q"]);
 			if(empty($query)){
-				$sql="SELECT * FROM owned_vehicles"; 
+				$sql="SELECT * FROM items"; 
 			} else {
-				$sql="SELECT * FROM owned_vehicles WHERE owner like '%".$query."%'"; 
+				$sql="SELECT * FROM items WHERE name like '%".$query."%'"; 
 			}
 			
 			$contadorElementos=0;
@@ -20,10 +20,9 @@
 			  // Fetch one and one row
 				while ($row=mysqli_fetch_row($result))
 				{
-					$identifier = $row[1];
-                    $plate = $row[7];
-                    $type = $row[8];
-                    $garageID = $row[10];
+					$name = $row[0];
+                    $label = $row[1];
+                    $limit = $row[2];
 
 					
 					$contadorElementos++;
@@ -31,17 +30,15 @@
                  
 					<tr>
 					<td>
-					<?=$identifier?>
+					<?=$name?>
 					</td>
 					<td>
-					<?=$plate?>  
+					<?=$label?>  
 					</td>
 					<td>
-					<?=$type?>
+					<?=$limit?>
 					</td>
-					<td>
-					<?=$garageID?>
-					</td>
+					<td><a target="blank" href="createItem.php?label=<?php echo $label; ?>"<button class="btn btn-primary" type="button">Edit</button></td>
 					</tr>				
 				<?php
 				}
@@ -49,5 +46,5 @@
 			
 	
 	mysqli_free_result($result);
-	mysqli_close($con);
+	mysqli_close($connection);
 ?>
