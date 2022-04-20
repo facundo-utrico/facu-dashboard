@@ -1,8 +1,10 @@
+![image](https://user-images.githubusercontent.com/67294331/164265472-0833295e-3b82-4df4-b370-dafdcace5979.png)
+
 **FREE**
 
 Web Administration Dashboard for FiveM Servers | **Work In Progress**
 
-**Tech: **
+**Tech:**
 - PHP
 - MYSQL
 - Bootstrap 
@@ -12,7 +14,7 @@ Web Administration Dashboard for FiveM Servers | **Work In Progress**
 - Server Overview Page ✅
 - Edit/Delete Characters. ✅
 
-**Working on: **
+**Working on:**
 - Create/Edit/Delete Items ☐
 - Inventories Page (Player, Trunk, Glovebox) ☐
 - Bans Page ☐
@@ -26,5 +28,5 @@ It may be that my practices are not the best, but I will improve them over time.
 **Feel free to bring any ideas to this project.**
 
 
-**My development discord: **
+**My development discord:**
 - https://discord.gg/b4Sr7BaNyj
